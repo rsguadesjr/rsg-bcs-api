@@ -28,7 +28,8 @@ namespace BCSProjectAPI.BusinessLayer.Manager
         {
             using (var db = new DataContext())
             {
-                return db.Employees.Skip(skip).Take(take).ToList();
+                //return db.Employees.Skip(skip).Take(take).ToList();
+                return db.Employees.ToList();
             }
         }
 

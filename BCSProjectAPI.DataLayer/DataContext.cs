@@ -17,8 +17,6 @@ namespace BCSProjectAPI.DataLayer
         public DbSet<Interest> Interests { get; set; }
         public DbSet<Language> Languages { get; set; }
         public DbSet<EmployeeDepartment> EmployeeDepartments { get; set; }
-        public DbSet<EmployeeHobby> EmployeeHobbies { get; set; }
-        public DbSet<EmployeeInterest> EmployeeInterests { get; set; }
         public DbSet<EmployeeLanguage> GetEmployeeLanguages { get; set; }
 
     }

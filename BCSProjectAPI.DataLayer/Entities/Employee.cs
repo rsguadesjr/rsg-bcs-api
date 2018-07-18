@@ -19,6 +19,8 @@ namespace BCSProjectAPI.DataLayer.Entities
         public string Country { get; set; }
         public string State { get; set; }
         public string PhoneNo { get; set; }
+        public ICollection<Hobby> Hobbies { get; set; }
+        public ICollection<Interest> Interests { get; set; }
         public DateTime DateHired { get; set; }
         public DateTime? DateResigned { get; set; }
     }

@@ -41,7 +41,7 @@ namespace BCSProjectAPI.Controllers
             return Created(new Uri(Request.RequestUri + "/" + employee.Id), employee);
         }
 
-        [HttpPost]
+        [HttpPut]
         public IHttpActionResult UpdateEmployee(int id, Employee employee)
         {
             var existingEmployee = _employeeManager.GetEmployee(id);

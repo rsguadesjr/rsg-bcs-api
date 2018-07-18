@@ -52,8 +52,6 @@
     <Compile Include="Entities\Department.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\EmployeeDepartment.cs" />
-    <Compile Include="Entities\EmployeeHobby.cs" />
-    <Compile Include="Entities\EmployeeInterest.cs" />
     <Compile Include="Entities\EmployeeLanguage.cs" />
     <Compile Include="Entities\Hobby.cs" />
     <Compile Include="Entities\Interest.cs" />
@@ -62,12 +60,19 @@
     <Compile Include="Migrations\201807181329420_InitialSetup.Designer.cs">
       <DependentUpon>201807181329420_InitialSetup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807181544040_UpdatedEmployeeRelationshipToHobbyAndInterestTable.cs" />
+    <Compile Include="Migrations\201807181544040_UpdatedEmployeeRelationshipToHobbyAndInterestTable.Designer.cs">
+      <DependentUpon>201807181544040_UpdatedEmployeeRelationshipToHobbyAndInterestTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807181329420_InitialSetup.resx">
       <DependentUpon>201807181329420_InitialSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807181544040_UpdatedEmployeeRelationshipToHobbyAndInterestTable.resx">
+      <DependentUpon>201807181544040_UpdatedEmployeeRelationshipToHobbyAndInterestTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
