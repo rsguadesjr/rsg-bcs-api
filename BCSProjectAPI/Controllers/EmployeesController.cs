@@ -1,4 +1,6 @@
-﻿using BCSProjectAPI.BusinessLayer.Manager;
+﻿using AutoMapper;
+using BCSProjectAPI.BusinessLayer.Manager;
+using BCSProjectAPI.DataLayer.Dtos;
 using BCSProjectAPI.DataLayer.Entities;
 using System;
 using System.Collections.Generic;
@@ -20,7 +22,6 @@ namespace BCSProjectAPI.Controllers
         public IHttpActionResult GetEmployees()
         {
             var result = _employeeManager.GetEmployees(0, 5);
-
             return Ok(result);
         }
 
@@ -33,7 +34,7 @@ namespace BCSProjectAPI.Controllers
 
         [HttpPost]
         public IHttpActionResult CreateEmployee(Employee employee)
-        {
+        { 
             var saved = _employeeManager.AddEmployee(employee);
             if (!saved)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
@@ -42,18 +43,14 @@ namespace BCSProjectAPI.Controllers
         }
 
         [HttpPut]
-        public IHttpActionResult UpdateEmployee(int id, Employee employee)
+        public void UpdateEmployee(int id, Employee employee)
         {
-            var existingEmployee = _employeeManager.GetEmployee(id);
-            if (existingEmployee == null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
-
-            var updated = _employeeManager.UpdateEmployee(employee);
-            if (!updated)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            var updated = _employeeManager.UpdateEmployee(id, employee);
+            //if (!updated)
+                //throw new HttpResponseException(HttpStatusCode.BadRequest);
 
 
-            return Ok();
+            //return Ok();
         }
     }
 }

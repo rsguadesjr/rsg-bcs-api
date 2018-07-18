@@ -1,8 +1,10 @@
-﻿using BCSProjectAPI.DataLayer;
+﻿using AutoMapper;
+using BCSProjectAPI.DataLayer;
 using BCSProjectAPI.DataLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
 
 namespace BCSProjectAPI.BusinessLayer.Manager
@@ -15,7 +17,7 @@ namespace BCSProjectAPI.BusinessLayer.Manager
             {
                 using (var db = new DataContext())
                 {
-                    return db.Employees.SingleOrDefault(x => x.Id == id);
+                    return db.Employees.Include(x => x.Hobbies).Include(x => x.Interests).SingleOrDefault(x => x.Id == id);
                 }
             }
             catch(Exception)
@@ -29,7 +31,7 @@ namespace BCSProjectAPI.BusinessLayer.Manager
             using (var db = new DataContext())
             {
                 //return db.Employees.Skip(skip).Take(take).ToList();
-                return db.Employees.ToList();
+                return db.Employees.Include(x => x.Hobbies).Include(x => x.Interests).ToList();
             }
         }
 
@@ -51,24 +53,25 @@ namespace BCSProjectAPI.BusinessLayer.Manager
             return false;
         }
 
-        public bool UpdateEmployee(Employee employee)
+        public bool UpdateEmployee(int id, Employee employee)
         {
             try
             {
                 using (var db = new DataContext())
                 {
-                    var existingEmployee = GetEmployee(employee.Id);
+                    var existingEmployee = GetEmployee(id);
                     if(existingEmployee != null)
                     {
-                        //map
+                        Mapper.Map(employee, existingEmployee);
+                        existingEmployee.Id = id;
                         db.Entry(existingEmployee).State = EntityState.Modified;
                         db.SaveChanges();
                     }
                 }
             }
-            catch(Exception)
+            catch(Exception err)
             {
-
+                Debug.WriteLine(err);
             }
             return false;
         }

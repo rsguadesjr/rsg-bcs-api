@@ -49,6 +49,8 @@
   <ItemGroup>
     <Compile Include="DataContext.cs" />
     <Compile Include="Dtos\EmployeeDto.cs" />
+    <Compile Include="Dtos\HobbyDto.cs" />
+    <Compile Include="Dtos\InterestDto.cs" />
     <Compile Include="Entities\Department.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\EmployeeDepartment.cs" />
@@ -64,6 +66,10 @@
     <Compile Include="Migrations\201807181544040_UpdatedEmployeeRelationshipToHobbyAndInterestTable.Designer.cs">
       <DependentUpon>201807181544040_UpdatedEmployeeRelationshipToHobbyAndInterestTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807181601338_UpdatedEmployee.cs" />
+    <Compile Include="Migrations\201807181601338_UpdatedEmployee.Designer.cs">
+      <DependentUpon>201807181601338_UpdatedEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -73,6 +79,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807181544040_UpdatedEmployeeRelationshipToHobbyAndInterestTable.resx">
       <DependentUpon>201807181544040_UpdatedEmployeeRelationshipToHobbyAndInterestTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807181601338_UpdatedEmployee.resx">
+      <DependentUpon>201807181601338_UpdatedEmployee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

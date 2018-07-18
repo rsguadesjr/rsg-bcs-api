@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BCSProjectAPI.DataLayer.Entities
+namespace BCSProjectAPI.DataLayer.Dtos
 {
-    public class Interest
+    public class HobbyDto
     {
         public int Id { get; set; }
-        public string InterestName { get; set; }
+        public string HobbyName { get; set; }
 
         public int EmployeeId { get; set; }
-        //public Employee Employee { get; set; } temp disable to see result from postamn
     }
 }

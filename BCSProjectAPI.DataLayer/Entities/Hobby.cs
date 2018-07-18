@@ -12,6 +12,6 @@ namespace BCSProjectAPI.DataLayer.Entities
         public string HobbyName { get; set; }
 
         public int EmployeeId { get; set; }
-        public Employee Employee { get; set; }
+        //public Employee Employee { get; set; }
     }
 }
