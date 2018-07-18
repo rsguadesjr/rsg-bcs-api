@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -285,6 +286,16 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BCSProjectAPI.BusinessLayer\BCSProjectAPI.BusinessLayer.csproj">
+      <Project>{16d2dcb3-c7e6-42d4-ace9-1116892213f1}</Project>
+      <Name>BCSProjectAPI.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BCSProjectAPI.DataLayer\BCSProjectAPI.DataLayer.csproj">
+      <Project>{d2bed236-b131-498d-ba10-9737d5022c52}</Project>
+      <Name>BCSProjectAPI.DataLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

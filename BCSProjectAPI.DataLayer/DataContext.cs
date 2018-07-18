@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BCSProjectAPI.DataLayer.Entities;
+using System.Data.Entity;
 
 namespace BCSProjectAPI.DataLayer
 {
-    class DataContext
+    public class DataContext : DbContext
     {
+        public DataContext() : base("BCSProject")
+        {
+
+        }
+
+
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Hobby> Hobbies { get; set; }
+        public DbSet<Interest> Interests { get; set; }
+        public DbSet<Language> Languages { get; set; }
+        public DbSet<EmployeeDepartment> EmployeeDepartments { get; set; }
+        public DbSet<EmployeeHobby> EmployeeHobbies { get; set; }
+        public DbSet<EmployeeInterest> EmployeeInterests { get; set; }
+        public DbSet<EmployeeLanguage> GetEmployeeLanguages { get; set; }
+
     }
 }
