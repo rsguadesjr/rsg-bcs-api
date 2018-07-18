@@ -58,9 +58,18 @@
     <Compile Include="Entities\Hobby.cs" />
     <Compile Include="Entities\Interest.cs" />
     <Compile Include="Entities\Language.cs" />
+    <Compile Include="Migrations\201807181329420_InitialSetup.cs" />
+    <Compile Include="Migrations\201807181329420_InitialSetup.Designer.cs">
+      <DependentUpon>201807181329420_InitialSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201807181329420_InitialSetup.resx">
+      <DependentUpon>201807181329420_InitialSetup.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
