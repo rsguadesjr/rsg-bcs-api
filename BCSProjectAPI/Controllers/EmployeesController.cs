@@ -17,14 +17,43 @@ namespace BCSProjectAPI.Controllers
             _employeeManager = new EmployeeManager();
         }
 
-        public IEnumerable<Employee> Get()
+        public IHttpActionResult GetEmployees()
         {
-            return _employeeManager.GetEmployees(0, 5);
+            var result = _employeeManager.GetEmployees(0, 5);
+
+            return Ok(result);
         }
 
-        public Employee Get(int id)
+        public IHttpActionResult GetEmployee(int id)
         {
-            return _employeeManager.GetEmployee(id);
+            var result = _employeeManager.GetEmployee(id);
+
+            return Ok(result);
+        }
+
+        [HttpPost]
+        public IHttpActionResult CreateEmployee(Employee employee)
+        {
+            var saved = _employeeManager.AddEmployee(employee);
+            if (!saved)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+            return Created(new Uri(Request.RequestUri + "/" + employee.Id), employee);
+        }
+
+        [HttpPost]
+        public IHttpActionResult UpdateEmployee(int id, Employee employee)
+        {
+            var existingEmployee = _employeeManager.GetEmployee(id);
+            if (existingEmployee == null)
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+
+            var updated = _employeeManager.UpdateEmployee(employee);
+            if (!updated)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+
+            return Ok();
         }
     }
 }
