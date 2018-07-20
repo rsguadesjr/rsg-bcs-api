@@ -18,6 +18,8 @@ namespace BCSProjectAPI.DataLayer
         public DbSet<Language> Languages { get; set; }
         public DbSet<EmployeeDepartment> EmployeeDepartments { get; set; }
         public DbSet<EmployeeLanguage> GetEmployeeLanguages { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<Role> Role { get; set; }
 
     }
 }

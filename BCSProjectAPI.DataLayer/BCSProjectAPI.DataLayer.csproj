@@ -60,6 +60,8 @@
     <Compile Include="Entities\Hobby.cs" />
     <Compile Include="Entities\Interest.cs" />
     <Compile Include="Entities\Language.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Migrations\201807181329420_InitialSetup.cs" />
     <Compile Include="Migrations\201807181329420_InitialSetup.Designer.cs">
       <DependentUpon>201807181329420_InitialSetup.cs</DependentUpon>
@@ -80,6 +82,10 @@
     <Compile Include="Migrations\201807200557243_UpdatedEmployeeAndCharacteristics.Designer.cs">
       <DependentUpon>201807200557243_UpdatedEmployeeAndCharacteristics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807201036162_AddUserAndRole.cs" />
+    <Compile Include="Migrations\201807201036162_AddUserAndRole.Designer.cs">
+      <DependentUpon>201807201036162_AddUserAndRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807200557243_UpdatedEmployeeAndCharacteristics.resx">
       <DependentUpon>201807200557243_UpdatedEmployeeAndCharacteristics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807201036162_AddUserAndRole.resx">
+      <DependentUpon>201807201036162_AddUserAndRole.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
