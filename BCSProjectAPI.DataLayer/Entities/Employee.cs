@@ -15,6 +15,7 @@ namespace BCSProjectAPI.DataLayer.Entities
         public byte Age { get; set; }
         public DateTime Birthday { get; set; }
         public string Gender { get; set; }
+        public string CivilStatus { get; set; }
         public string Address { get; set; }
         public string Country { get; set; }
         public string State { get; set; }
@@ -23,5 +24,7 @@ namespace BCSProjectAPI.DataLayer.Entities
         public virtual ICollection<Interest> Interests { get; set; }
         public DateTime DateHired { get; set; }
         public DateTime? DateResigned { get; set; }
+
+        public virtual ICollection<EmployeeCharacteristic> EmployeeCharacteristics { get; set; }
     }
 }

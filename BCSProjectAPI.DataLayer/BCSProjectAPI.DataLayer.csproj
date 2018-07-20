@@ -51,8 +51,10 @@
     <Compile Include="Dtos\EmployeeDto.cs" />
     <Compile Include="Dtos\HobbyDto.cs" />
     <Compile Include="Dtos\InterestDto.cs" />
+    <Compile Include="Entities\Characteristic.cs" />
     <Compile Include="Entities\Department.cs" />
     <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\EmployeeCharacteristic.cs" />
     <Compile Include="Entities\EmployeeDepartment.cs" />
     <Compile Include="Entities\EmployeeLanguage.cs" />
     <Compile Include="Entities\Hobby.cs" />
@@ -70,6 +72,14 @@
     <Compile Include="Migrations\201807181601338_UpdatedEmployee.Designer.cs">
       <DependentUpon>201807181601338_UpdatedEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807200549358_AddedCharacteristicsEntity.cs" />
+    <Compile Include="Migrations\201807200549358_AddedCharacteristicsEntity.Designer.cs">
+      <DependentUpon>201807200549358_AddedCharacteristicsEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807200557243_UpdatedEmployeeAndCharacteristics.cs" />
+    <Compile Include="Migrations\201807200557243_UpdatedEmployeeAndCharacteristics.Designer.cs">
+      <DependentUpon>201807200557243_UpdatedEmployeeAndCharacteristics.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -82,6 +92,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807181601338_UpdatedEmployee.resx">
       <DependentUpon>201807181601338_UpdatedEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807200549358_AddedCharacteristicsEntity.resx">
+      <DependentUpon>201807200549358_AddedCharacteristicsEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807200557243_UpdatedEmployeeAndCharacteristics.resx">
+      <DependentUpon>201807200557243_UpdatedEmployeeAndCharacteristics.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
