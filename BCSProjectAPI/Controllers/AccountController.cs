@@ -19,6 +19,7 @@ using BCSProjectAPI.Results;
 
 namespace BCSProjectAPI.Controllers
 {
+    /*
     [Authorize]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
@@ -491,4 +492,5 @@ namespace BCSProjectAPI.Controllers
 
         #endregion
     }
+    */
 }

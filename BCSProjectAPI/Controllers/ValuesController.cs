@@ -10,16 +10,28 @@ namespace BCSProjectAPI.Controllers
     //[Authorize]
     public class ValuesController : ApiController
     {
+        [AllowAnonymous]
+        [HttpGet]
         // GET api/values
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
+        [Authorize]
+        [HttpGet]
         // GET api/values/5
         public string Get(int id)
         {
             return "value";
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet]
+        [Route("api/data/get2")]
+        public string Get2()
+        {
+            return $"Value is 2";
         }
 
         // POST api/values
