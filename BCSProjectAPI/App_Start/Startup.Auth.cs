@@ -30,7 +30,7 @@ namespace BCSProjectAPI
             app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
 
             HttpConfiguration config = new HttpConfiguration();
-            WebApiConfig.Register(config);
+            WebApiConfig.Register(config);  
         }
         //public static OAuthAuthorizationServerOptions OAuthOptions { get; private set; }
 

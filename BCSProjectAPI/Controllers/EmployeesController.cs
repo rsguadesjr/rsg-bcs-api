@@ -14,24 +14,28 @@ namespace BCSProjectAPI.Controllers
     public class EmployeesController : ApiController
     {
         private readonly EmployeeManager _employeeManager;
+
         public EmployeesController()
         {
             _employeeManager = new EmployeeManager();
         }
 
+        // GET api/employees
         public IHttpActionResult GetEmployees()
         {
             var result = _employeeManager.GetEmployees(0, 5);
-            return Ok(result);
+            return Ok(Mapper.Map<List<Employee>, List<EmployeeDto>>(result));
         }
 
+        // GET api/employees/1
         public IHttpActionResult GetEmployee(int id)
         {
             var result = _employeeManager.GetEmployee(id);
-
-            return Ok(result);
+            return Ok(Mapper.Map<Employee, EmployeeDto>(result));
         }
 
+        // POST api/employees
+        [Authorize]
         [HttpPost]
         public IHttpActionResult CreateEmployee(Employee employee)
         { 
@@ -42,15 +46,15 @@ namespace BCSProjectAPI.Controllers
             return Created(new Uri(Request.RequestUri + "/" + employee.Id), employee);
         }
 
+        // PUT api/employees/1
         [HttpPut]
-        public void UpdateEmployee(int id, Employee employee)
+        public IHttpActionResult UpdateEmployee(int id, Employee employee)
         {
             var updated = _employeeManager.UpdateEmployee(id, employee);
-            //if (!updated)
-                //throw new HttpResponseException(HttpStatusCode.BadRequest);
+            if (!updated)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
 
-
-            //return Ok();
+            return Ok();
         }
     }
 }

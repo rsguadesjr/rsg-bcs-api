@@ -13,7 +13,7 @@ namespace BCSProjectAPI.DataLayer.Entities
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public byte Age { get; set; }
-        public DateTime Birthday { get; set; }
+        public DateTime? Birthday { get; set; }
         public string Gender { get; set; }
         public string CivilStatus { get; set; }
         public string Address { get; set; }
@@ -21,9 +21,11 @@ namespace BCSProjectAPI.DataLayer.Entities
         public string State { get; set; }
         public string PhoneNo { get; set; }
         public virtual ICollection<Hobby> Hobbies { get; set; }
-        public virtual ICollection<Interest> Interests { get; set; }
         public DateTime DateHired { get; set; }
         public DateTime? DateResigned { get; set; }
+        public int DepartmentId { get; set; }
+        public virtual Department Department { get; set; }
+        public virtual ICollection<Language> Languages { get; set; }
 
         public virtual ICollection<EmployeeCharacteristic> EmployeeCharacteristics { get; set; }
     }

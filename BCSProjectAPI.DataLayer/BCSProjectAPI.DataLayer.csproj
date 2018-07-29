@@ -48,9 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContext.cs" />
+    <Compile Include="Dtos\EmployeeCharacteristicDto.cs" />
     <Compile Include="Dtos\EmployeeDto.cs" />
     <Compile Include="Dtos\HobbyDto.cs" />
     <Compile Include="Dtos\InterestDto.cs" />
+    <Compile Include="Dtos\RoleDto.cs" />
+    <Compile Include="Dtos\UserDto.cs" />
     <Compile Include="Entities\Characteristic.cs" />
     <Compile Include="Entities\Department.cs" />
     <Compile Include="Entities\Employee.cs" />
@@ -86,6 +89,38 @@
     <Compile Include="Migrations\201807201036162_AddUserAndRole.Designer.cs">
       <DependentUpon>201807201036162_AddUserAndRole.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807240315368_AddedIsLockedInUser.cs" />
+    <Compile Include="Migrations\201807240315368_AddedIsLockedInUser.Designer.cs">
+      <DependentUpon>201807240315368_AddedIsLockedInUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807240326150_AddedLoginAttemptToUser.cs" />
+    <Compile Include="Migrations\201807240326150_AddedLoginAttemptToUser.Designer.cs">
+      <DependentUpon>201807240326150_AddedLoginAttemptToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807240525066_AddUniqueContraintToUser.cs" />
+    <Compile Include="Migrations\201807240525066_AddUniqueContraintToUser.Designer.cs">
+      <DependentUpon>201807240525066_AddUniqueContraintToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807240529516_addedCharLimitToUsernameAndPassword.cs" />
+    <Compile Include="Migrations\201807240529516_addedCharLimitToUsernameAndPassword.Designer.cs">
+      <DependentUpon>201807240529516_addedCharLimitToUsernameAndPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807240623192_AddedDateCreatedAndUpdatedToUser.cs" />
+    <Compile Include="Migrations\201807240623192_AddedDateCreatedAndUpdatedToUser.Designer.cs">
+      <DependentUpon>201807240623192_AddedDateCreatedAndUpdatedToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807240901086_AddCharacteristics.cs" />
+    <Compile Include="Migrations\201807240901086_AddCharacteristics.Designer.cs">
+      <DependentUpon>201807240901086_AddCharacteristics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807251603124_UpdatedEmployeeFields.cs" />
+    <Compile Include="Migrations\201807251603124_UpdatedEmployeeFields.Designer.cs">
+      <DependentUpon>201807251603124_UpdatedEmployeeFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807291024339_AddedDepartmentToEmployee.cs" />
+    <Compile Include="Migrations\201807291024339_AddedDepartmentToEmployee.Designer.cs">
+      <DependentUpon>201807291024339_AddedDepartmentToEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -107,6 +142,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807201036162_AddUserAndRole.resx">
       <DependentUpon>201807201036162_AddUserAndRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240315368_AddedIsLockedInUser.resx">
+      <DependentUpon>201807240315368_AddedIsLockedInUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240326150_AddedLoginAttemptToUser.resx">
+      <DependentUpon>201807240326150_AddedLoginAttemptToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240525066_AddUniqueContraintToUser.resx">
+      <DependentUpon>201807240525066_AddUniqueContraintToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240529516_addedCharLimitToUsernameAndPassword.resx">
+      <DependentUpon>201807240529516_addedCharLimitToUsernameAndPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240623192_AddedDateCreatedAndUpdatedToUser.resx">
+      <DependentUpon>201807240623192_AddedDateCreatedAndUpdatedToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240901086_AddCharacteristics.resx">
+      <DependentUpon>201807240901086_AddCharacteristics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807251603124_UpdatedEmployeeFields.resx">
+      <DependentUpon>201807251603124_UpdatedEmployeeFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807291024339_AddedDepartmentToEmployee.resx">
+      <DependentUpon>201807291024339_AddedDepartmentToEmployee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace BCSProjectAPI.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class ValuesController : ApiController
     {
         [AllowAnonymous]

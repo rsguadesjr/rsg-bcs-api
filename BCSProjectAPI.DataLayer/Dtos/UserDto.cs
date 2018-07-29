@@ -1,18 +1,17 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace BCSProjectAPI.DataLayer.Entities
+namespace BCSProjectAPI.DataLayer.Dtos
 {
-    public class User
+    public class UserDto
     {
         public int Id { get; set; }
 
-        [Index(IsUnique = true)]
-        [StringLength(50)]
         public string Username { get; set; }
 
-        [StringLength(100)]
         public string Password { get; set; }
         public bool IsLocked { get; set; }
         public byte LoginAttempt { get; set; }
@@ -20,9 +19,9 @@ namespace BCSProjectAPI.DataLayer.Entities
         public DateTime? DateUpdated { get; set; }
 
         public int? EmployeeId { get; set; }
-        public virtual Employee Employee { get; set; }
+        //public EmployeeDto Employee { get; set; }
 
         public int RoleId { get; set; }
-        public virtual Role Role { get; set; }
+        public RoleDto Role { get; set; }
     }
 }
